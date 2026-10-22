@@ -1,9 +1,8 @@
 package net.kaihallow.powr.events;
 
-import net.kaihallow.powr.effect.WaterResistanceEffect;
+import net.kaihallow.powr.effect.ModEffects;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.damagesource.DamageTypes;
-import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.player.Player;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.neoforge.event.entity.living.LivingIncomingDamageEvent;
@@ -18,7 +17,14 @@ public class PlayerHurtEvent
         }
         DamageSource source = event.getSource();
 
-        boolean effect = player.getActiveEffects().isEmpty();
-        boolean nonWaterDamage = source.getEntity() == null && !source.is(DamageTypes.DROWN);
+        if (!player.hasEffect(ModEffects.WATER_RES_EFFECT)) {
+            return;
+        }
+
+        boolean effect = player.isInWater() && player.hasEffect(ModEffects.WATER_RES_EFFECT);
+        boolean waterDamage = source.getEntity() == null && !source.is(DamageTypes.DROWN);
+        if (waterDamage && effect) {
+            event.setCanceled(true);
+        }
     }
 }

@@ -43,6 +43,8 @@ public class ModEvents
         PotionBrewing.Builder builder = event.getBuilder();
 
         builder.addMix(Potions.AWKWARD, Items.SALMON, ModPotions.WATER_RES_POTION);
+        builder.addMix(ModPotions.WATER_RES_POTION, Items.COD, ModPotions.WATER_RES_POTION_PLUS);
+        builder.addMix(ModPotions.WATER_RES_POTION_PLUS, Items.REDSTONE, ModPotions.WATER_RES_POTION_MAX);
     }
 
 

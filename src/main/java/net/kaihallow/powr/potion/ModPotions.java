@@ -14,7 +14,13 @@ public class ModPotions {
             DeferredRegister.create(BuiltInRegistries.POTION, POWR.MOD_ID);
 
     public static final Holder<Potion> WATER_RES_POTION =POTIONS.register("water_res_potion",
-            () -> new Potion(new MobEffectInstance(ModEffects.WATER_RES_EFFECT, 1200, 0)));
+            () -> new Potion(new MobEffectInstance(ModEffects.WATER_RES_EFFECT, 3600, 0)));
+
+    public static final Holder<Potion> WATER_RES_POTION_PLUS =POTIONS.register("water_res_potion_plus",
+            () -> new Potion(new MobEffectInstance(ModEffects.WATER_RES_EFFECT, 7200, 0)));
+
+    public static final Holder<Potion> WATER_RES_POTION_MAX =POTIONS.register("water_res_potion_max",
+            () -> new Potion(new MobEffectInstance(ModEffects.WATER_RES_EFFECT, 12000, 0)));
 
     public static void register(IEventBus eventBus){POTIONS.register(eventBus);}
 }

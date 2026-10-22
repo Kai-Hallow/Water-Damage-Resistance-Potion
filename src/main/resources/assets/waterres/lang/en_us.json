@@ -4,5 +4,7 @@
   "item.examplemod.example_item": "Example Item",
 
   "effect.waterres.water_resistance": "Water Resistance",
-  "item.minecraft.potion.effect.water_res_potion": "Potion of Water Resistance"
+  "item.minecraft.potion.effect.water_res_potion": "Potion of Water Resistance",
+  "item.minecraft.potion.effect.water_res_potion_plus": "Potion of Water Resistance+",
+  "item.minecraft.potion.effect.water_res_potion_max": "Potion of Water Resistance*"
 }

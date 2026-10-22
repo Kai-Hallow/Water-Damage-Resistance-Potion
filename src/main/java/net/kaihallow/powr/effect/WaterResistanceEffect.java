@@ -17,7 +17,7 @@ public class WaterResistanceEffect extends MobEffect
 
     @Override
     public boolean applyEffectTick(LivingEntity livingEntity, int amplifier) {
-        if (livingEntity.isInWater()) {
+        if (livingEntity.isInWaterOrRain()) {
             return true;
         }
 

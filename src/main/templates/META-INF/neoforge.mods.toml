@@ -42,11 +42,11 @@ displayName="${mod_name}" #mandatory
 #credits="" #optional
 
 # The authors of the mod, displayed in the mod UI (optional)
-#authors=""
+authors="Kai Hallow"
 
 # The description text for the mod (multi line!) (#mandatory)
 description='''
-Example mod description.
+For those who are using something other than regular origin or may have a mod that does water damage. This will eventually be available for Fabric and regular Forge. This will be updated to the newest version eventually
 '''
 
 # The [[mixins]] block allows you to declare your mixin config to FML so that it gets loaded.

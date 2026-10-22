@@ -13,7 +13,7 @@ public class ModEffects
     public static final DeferredRegister<MobEffect> MOB_EFFECTS =
             DeferredRegister.create(BuiltInRegistries.MOB_EFFECT, POWR.MODID);
 
-    public static final Holder<MobEffect> WATER_RES_EFFECT = MOB_EFFECTS.register("waterresistance",
+    public static final Holder<MobEffect> WATER_RES_EFFECT = MOB_EFFECTS.register("water_resistance",
             () -> new WaterResistanceEffect(MobEffectCategory.BENEFICIAL, 0x00000000));
 
     public static void register(IEventBus eventBus)

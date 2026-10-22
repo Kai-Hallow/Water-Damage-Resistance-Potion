@@ -21,7 +21,7 @@ import net.neoforged.neoforge.event.server.ServerStartingEvent;
 @Mod(POWR.MODID)
 public class POWR
 {
-    public static final String MODID = "potofwaterres";
+    public static final String MODID = "waterres";
     public static final Logger LOGGER = LogUtils.getLogger();
 
     // The constructor for the mod class is the first code that is run when your mod is loaded.

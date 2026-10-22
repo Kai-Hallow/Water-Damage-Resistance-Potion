@@ -3,5 +3,6 @@
   "block.examplemod.example_block": "Example Block",
   "item.examplemod.example_item": "Example Item",
 
-  "effect.waterres.water_resistance": "Water Resistance"
+  "effect.waterres.water_resistance": "Water Resistance",
+  "item.minecraft.potion.effect.water_res_potion": "Potion of Water Resistance"
 }

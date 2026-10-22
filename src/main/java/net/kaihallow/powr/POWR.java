@@ -1,7 +1,7 @@
 package net.kaihallow.powr;
 
 import net.kaihallow.powr.effect.ModEffects;
-import net.kaihallow.powr.events.PlayerHurtEvent;
+import net.kaihallow.powr.potion.ModPotions;
 import org.slf4j.Logger;
 
 import com.mojang.logging.LogUtils;
@@ -17,12 +17,13 @@ import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.neoforged.neoforge.common.NeoForge;
 import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
 import net.neoforged.neoforge.event.server.ServerStartingEvent;
+import net.kaihallow.powr.event.ModEvents;
 
 // The value here should match an entry in the META-INF/neoforge.mods.toml file
-@Mod(POWR.MODID)
+@Mod(POWR.MOD_ID)
 public class POWR
 {
-    public static final String MODID = "waterres";
+    public static final String MOD_ID = "waterres";
     public static final Logger LOGGER = LogUtils.getLogger();
 
     // The constructor for the mod class is the first code that is run when your mod is loaded.
@@ -35,9 +36,10 @@ public class POWR
         // Note that this is necessary if and only if we want *this* class (ExampleMod) to respond directly to events.
         // Do not add this line if there are no @SubscribeEvent-annotated functions in this class, like onServerStarting() below.
         NeoForge.EVENT_BUS.register(this);
+
         // Wanted to ensure the event for player hurt got called
-        NeoForge.EVENT_BUS.register(PlayerHurtEvent.class);
         ModEffects.register(modEventBus);
+        ModPotions.register(modEventBus);
 
         // Register the item to a creative tab
         modEventBus.addListener(this::addCreative);
